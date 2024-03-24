@@ -1,18 +1,5 @@
-# GitHub Action runner images for AWS
+# GitHub Action runner images for DigitalOcean
 
-GitHub Action Runner images for AWS, to be used with [RunsOn](https://runs-on.com/?ref=runner-images-for-aws), or for your own usage.
+GitHub Action Runner images for DigitalOcean, based on [runner images for aws](https://github.com/runs-on/runner-images-for-aws) which is an hook for the original (runner images)[https://github.com/actions/runner-images].
 
 Official images are replicated and published within 48h of their release by GitHub.
-
-## AMI details
-
-Supported regions:
-
-* North Virginia (`us-east-1`)
-* Ireland (`eu-west-1`)
-* Oregon (`us-west-2`)
-* Frankfurt (`eu-central-1`)
-
-For x64, search for `runs-on-ubuntu22-full-x64-*` with owner `135269210855`.
-
-For ARM64, search for `runs-on-ubuntu22-full-arm64-*` with owner `135269210855`.
