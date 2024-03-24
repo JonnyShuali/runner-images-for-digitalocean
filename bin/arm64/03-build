@@ -7,7 +7,7 @@ RELEASE_ARCH="arm64"
 
 set -u
 
-: $SUBNET_ID
+# : $SUBNET_ID
 
 if [ -z "$RELEASE_DIST" ]; then
   echo "Usage: $0 <release-dist> <release-date>"
