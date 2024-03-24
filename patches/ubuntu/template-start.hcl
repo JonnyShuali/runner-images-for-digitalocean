@@ -9,9 +9,8 @@ packer {
 
 variable "api_token" {
   type    = string
-  default = "${env("DIGITALOCEAN_API_URL")}"
+  default = "${env("DIGITALOCEAN_TOKEN")}"
 }
-
 variable "do_image" {
   type    = string
   default = "ubuntu-22-04-x64"
