@@ -20,6 +20,10 @@ variable "do_size" {
   type    = string
   default = "s-1vcpu-1gb"
 }
+variable "snapshot_name" {
+  type    = string
+  default = "${env("AMI_NAME")}"
+}
 variable "dockerhub_login" {
   type    = string
   default = "${env("DOCKERHUB_LOGIN")}"
@@ -88,7 +92,7 @@ source "digitalocean" "build_ebs" {
   region                  = "${var.region}"
   size                    = "${var.do_size}"
   ssh_username            = "ubuntu"
-  snapshot_name           = "${var.ami_name}"
+  snapshot_name           = "${var.snapshot_name}"
   connect_with_private_ip = "false"
   tags = {
     creator = "RunsOn"
