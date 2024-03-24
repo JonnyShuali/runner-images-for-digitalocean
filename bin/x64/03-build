@@ -22,7 +22,7 @@ export IMAGE_VERSION="$RELEASE_DATE"
 
 case "$RELEASE_DIST" in
   "ubuntu22")
-    export PACKER_TEMPLATE="images/ubuntu/templates/ubuntu-22.04-$RELEASE_ARCH-aws.pkr.hcl"
+    export PACKER_TEMPLATE="images/ubuntu/templates/ubuntu-22.04-$RELEASE_ARCH-digitalocean.pkr.hcl"
     ;;
   *)
     echo "Unsupported release dist: $RELEASE_DIST"
