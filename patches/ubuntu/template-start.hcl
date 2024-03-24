@@ -94,10 +94,7 @@ source "digitalocean" "build_ebs" {
   ssh_username            = "ubuntu"
   snapshot_name           = "${var.snapshot_name}"
   connect_with_private_ip = "false"
-  tags = {
-    creator = "RunsOn"
-    contact = "ops@runs-on.com"
-  }
+  tags = ["JonnyShuali"]
   snapshot_regions = [
     "nyc1",
     // "nyc2",
