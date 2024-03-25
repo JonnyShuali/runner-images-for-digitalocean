@@ -17,7 +17,7 @@ variable "do_image" {
 }
 variable "do_size" {
   type    = string
-  default = "s-1vcpu-1gb"
+  default = "${env("DIGITALOCEAN_SIZE")}"
 }
 variable "snapshot_name" {
   type    = string

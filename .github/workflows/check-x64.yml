@@ -29,6 +29,7 @@ jobs:
         timeout-minutes: 300
         env:
           DIGITALOCEAN_TOKEN : ${{ secrets.DIGITALOCEAN_TOKEN }}
+          DIGITALOCEAN_SIZE: ${{ vars.DIGITALOCEAN_SIZE }}
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Add ${{ steps.check.outputs.release }} release"
