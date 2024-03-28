@@ -90,7 +90,7 @@ source "digitalocean" "build_ebs" {
   image                   = "${var.do_image}"
   region                  = "${var.region}"
   size                    = "${var.do_size}"
-  ssh_username            = "ubuntu"
+  ssh_username            = "root"
   snapshot_name           = "${var.snapshot_name}"
   connect_with_private_ip = "false"
   tags = ["JonnyShuali"]
