@@ -46,6 +46,9 @@ build.gsub!(%{sources = ["source.azure-arm.build_image"]}, %Q{
 # Android is 8GB large, not installing for now. Doesn't make sense on x64 anyway, since we have ARM.
 build.gsub!(%{"${path.root}/../scripts/build/install-android-sdk.sh",}, "") or fail("Failed to patch android")
 
+# Disable homebrew for now
+build.gsub!(%{"${path.root}/../scripts/build/install-homebrew.sh",}, "") or fail("Failed to patch homebrew")
+
 # CodeQL cache is taking 4.8 GiB in the AMI, and is not needed for workflows
 build.gsub!(%{"${path.root}/../scripts/build/install-codeql-bundle.sh",}, "") or fail("Failed to patch CodeQL")
 patch_file("images/ubuntu/scripts/docs-gen/Generate-SoftwareReport.ps1", /^.*CodeQL.*$/i)
