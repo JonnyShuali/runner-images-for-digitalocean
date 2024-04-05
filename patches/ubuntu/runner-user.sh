@@ -17,3 +17,4 @@ rm -rf /opt/runner-cache
 
 # test presence of run.sh
 test -s /home/runner/run.sh
+su - runner
